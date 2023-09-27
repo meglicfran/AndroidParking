@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Android Parking</string>
+    <string name="username_hint">Username</string>
+    <string name="password_hint">Password</string>
+    <string name="carmen_btn">Carmen</string>
+    <string name="log_in_btn">Log in</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
