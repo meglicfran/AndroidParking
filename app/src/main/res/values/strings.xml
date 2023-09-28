@@ -6,4 +6,17 @@
     <string name="log_in_btn">Log in</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string-array name="countries">
+        <item>ALB-Albania</item>
+        <item>AUS-Australija</item>
+        <item>A-Austrija</item>
+        <item>BEL-Belgija</item>
+        <item>BIH-Bosna i Hercegovina</item>
+    </string-array>
+    <string-array name="parking">
+        <item>221-Dražine</item>
+        <item>222-Dubašljanska</item>
+        <item>164-Lukobran</item>
+        <item>163-Obala</item>
+    </string-array>
 </resources>

@@ -6,14 +6,124 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".LegacyFragment">
 
-    <TextView
-        style="@style/TextAppearance.AppCompat.Display1"
-        android:layout_width="wrap_content"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        android:text="Legacy Fragment" />
+        android:layout_marginTop="20dp"
+        android:layout_marginHorizontal="20dp">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/plateInputLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            android:hint="Tablica">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/plateEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textCapCharacters"
+                />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <LinearLayout
+            android:id="@+id/buttonLayout"
+            app:layout_constraintTop_toBottomOf="@id/plateInputLayout"
+            android:layout_marginTop="15dp"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/opazaj"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Opažaj"
+                app:icon="@drawable/eye_icon_24"/>
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/munja"
+                style="?attr/materialIconButtonOutlinedStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:icon="@drawable/bolt_icon_24"/>
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/pregled"
+                style="@style/Widget.Material3.Button.OutlinedButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Pregled"
+                app:icon="@drawable/baseline_search_24"/>
+        </LinearLayout>
+
+        <!--
+         <com.google.android.material.button.MaterialButtonToggleGroup
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             app:layout_constraintTop_toBottomOf="@id/plateInputLayout"
+             app:layout_constraintStart_toStartOf="parent"
+             app:layout_constraintEnd_toEndOf="parent"
+             android:layout_marginTop="15dp">
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="?attr/materialButtonOutlinedStyle"
+                android:text="Opažaj"
+                app:icon="@drawable/eye_icon_24"/>
+            <Button
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                style="?attr/materialIconButtonOutlinedStyle"
+                 app:icon="@drawable/bolt_icon_24"/>
+            <Button
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 style="?attr/materialButtonOutlinedStyle"
+                 android:text="Pregled"
+                 app:icon="@drawable/baseline_search_24"/>
+         </com.google.android.material.button.MaterialButtonToggleGroup>
+         -->
+
+        <com.google.android.material.checkbox.MaterialCheckBox
+            android:id="@+id/stranaRegCheckBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Strana registracija"
+            app:layout_constraintTop_toBottomOf="@id/buttonLayout"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/countryDropdown"
+            android:enabled="false"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/stranaRegCheckBox"
+            android:hint="Zemlja"
+            style="@style/Widget.Material3.TextInputLayout.OutlinedBox.ExposedDropdownMenu">
+            <AutoCompleteTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="none"
+                app:simpleItems="@array/countries"
+                />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/parkingDropdown"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/countryDropdown"
+            android:hint="Parkirališta/Parkirno mjesto"
+            android:layout_marginTop="16dp"
+            style="@style/Widget.Material3.TextInputLayout.OutlinedBox.ExposedDropdownMenu">
+            <AutoCompleteTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="none"
+                app:simpleItems="@array/parking"
+                />
+        </com.google.android.material.textfield.TextInputLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
