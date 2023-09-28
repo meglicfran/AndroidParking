@@ -9,6 +9,7 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AutoCompleteTextView;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 
@@ -18,6 +19,7 @@ import com.google.android.material.textfield.TextInputLayout;
 
 public class LegacyFragment extends Fragment {
     TextInputLayout plateInputLayout,countryDropdown,parkingDropdown;
+    AutoCompleteTextView countryDropdownTextView,parkingDropdownTextView;
     EditText plateEditText;
     MaterialButton opazaj,munja,pregled;
     MaterialCheckBox stranaRegCheckBox;
@@ -34,8 +36,10 @@ public class LegacyFragment extends Fragment {
 
         plateInputLayout = view.findViewById(R.id.plateInputLayout);
         countryDropdown = view.findViewById(R.id.countryDropdown);
+        countryDropdownTextView = view.findViewById(R.id.countryDropdownTextView);
         parkingDropdown = view.findViewById(R.id.parkingDropdown);
-        plateEditText = view.findViewById(R.id.passwordEditText);
+        parkingDropdownTextView = view.findViewById(R.id.parkingDropdownTextView);
+        plateEditText = view.findViewById(R.id.plateEditText);
         opazaj = view.findViewById(R.id.opazaj);
         munja = view.findViewById(R.id.munja);
         pregled = view.findViewById(R.id.pregled);
@@ -45,6 +49,7 @@ public class LegacyFragment extends Fragment {
             if(state==MaterialCheckBox.STATE_CHECKED){
                 countryDropdown.setEnabled(true);
             }else{
+                countryDropdownTextView.setText(null);
                 countryDropdown.setEnabled(false);
             }
         });

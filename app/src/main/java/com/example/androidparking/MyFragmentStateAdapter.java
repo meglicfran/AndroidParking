@@ -5,10 +5,13 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.lifecycle.Lifecycle;
 import androidx.viewpager2.adapter.FragmentStateAdapter;
+import androidx.viewpager2.widget.ViewPager2;
 
 public class MyFragmentStateAdapter extends FragmentStateAdapter {
-    public MyFragmentStateAdapter(@NonNull FragmentManager fragmentManager, @NonNull Lifecycle lifecycle) {
+    ViewPager2 pager;
+    public MyFragmentStateAdapter(@NonNull FragmentManager fragmentManager, @NonNull Lifecycle lifecycle, ViewPager2 pager) {
         super(fragmentManager, lifecycle);
+        this.pager=pager;
     }
 
     @Override
@@ -16,7 +19,7 @@ public class MyFragmentStateAdapter extends FragmentStateAdapter {
         if(position==0){
             return new LegacyFragment();
         }else if(position==1){
-            return new CarmenEventsFragment();
+            return new CarmenEventsFragment(pager);
         }else if(position==2){
             return new OpazajiFragment();
         }else if(position==3){

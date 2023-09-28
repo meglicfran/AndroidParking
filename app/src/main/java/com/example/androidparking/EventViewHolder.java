@@ -13,10 +13,12 @@ import androidx.recyclerview.widget.RecyclerView;
 public class EventViewHolder extends RecyclerView.ViewHolder {
     TextView plate, time;
     ImageView image;
-
+    int countryIndex,parkingIndex;
     Button uredi,nalog;
-    public EventViewHolder(@NonNull View itemView) {
+    public EventViewHolder(@NonNull View itemView,int countryIndex,int parkingIndex) {
         super(itemView);
+        this.countryIndex=countryIndex;
+        this.parkingIndex=parkingIndex;
         this.plate = itemView.findViewById(R.id.plate);
         this.time = itemView.findViewById(R.id.time);
         this.image = itemView.findViewById(R.id.image);

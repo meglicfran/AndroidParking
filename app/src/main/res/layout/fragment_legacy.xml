@@ -101,6 +101,7 @@
             android:hint="Zemlja"
             style="@style/Widget.Material3.TextInputLayout.OutlinedBox.ExposedDropdownMenu">
             <AutoCompleteTextView
+                android:id="@+id/countryDropdownTextView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="none"
@@ -117,6 +118,7 @@
             android:layout_marginTop="16dp"
             style="@style/Widget.Material3.TextInputLayout.OutlinedBox.ExposedDropdownMenu">
             <AutoCompleteTextView
+                android:id="@+id/parkingDropdownTextView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="none"

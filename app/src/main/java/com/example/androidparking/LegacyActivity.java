@@ -28,7 +28,7 @@ public class LegacyActivity extends AppCompatActivity {
         pager = findViewById(R.id.pager);
         tabLayout = findViewById(R.id.tabLayout);
 
-        FragmentStateAdapter adapter = new MyFragmentStateAdapter(getSupportFragmentManager(),getLifecycle());
+        FragmentStateAdapter adapter = new MyFragmentStateAdapter(getSupportFragmentManager(),getLifecycle(),pager);
         pager.setAdapter(adapter);
 
         new TabLayoutMediator(tabLayout, pager, (tab, position) -> {

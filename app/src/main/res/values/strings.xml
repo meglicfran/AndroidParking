@@ -12,6 +12,7 @@
         <item>A-Austrija</item>
         <item>BEL-Belgija</item>
         <item>BIH-Bosna i Hercegovina</item>
+        <item>HRV-Hrvatska</item>
     </string-array>
     <string-array name="parking">
         <item>221-Dražine</item>
