@@ -16,7 +16,7 @@ public class MyFragmentStateAdapter extends FragmentStateAdapter {
         if(position==0){
             return new LegacyFragment();
         }else if(position==1){
-            return new CarmentEventsFragment();
+            return new CarmenEventsFragment();
         }else if(position==2){
             return new OpazajiFragment();
         }else if(position==3){

@@ -7,16 +7,12 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-import androidx.recyclerview.widget.SnapHelper;
-
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-
 import com.google.android.material.carousel.CarouselLayoutManager;
-import com.google.android.material.carousel.FullScreenCarouselStrategy;
 
-public class CarmentEventsFragment extends Fragment {
+public class CarmenEventsFragment extends Fragment {
 
     RecyclerView recyclerView;
 
@@ -35,7 +31,7 @@ public class CarmentEventsFragment extends Fragment {
 
         RecyclerViewAdapter adapter = new RecyclerViewAdapter();
         recyclerView.setAdapter(adapter);
-        recyclerView.setLayoutManager(new CarouselLayoutManager(new FullScreenCarouselStrategy(),RecyclerView.VERTICAL));
+        recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
 
     }
 }

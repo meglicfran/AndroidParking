@@ -1,6 +1,5 @@
 package com.example.androidparking;
 
-import android.graphics.drawable.Drawable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,7 +11,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<EventViewHolder> {
     @NonNull
     @Override
     public EventViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.recycler_view_row,parent,false);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.material_card,parent,false);
         return new EventViewHolder(view);
     }
 
